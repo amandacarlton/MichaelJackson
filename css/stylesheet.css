@@ -1,0 +1,41 @@
+
+img{
+  height:500px;
+  width:500px;
+}
+
+.buy{
+  float: right;
+}
+
+.info{
+  float: left;
+  width: 60%;
+}
+
+/*div{
+  border: 1px solid black;
+}*/
+
+select{
+  width:50px;
+}
+
+.checkout{
+  float: right;
+}
+
+.search{
+  margin-left: 30px;
+  float:left;
+}
+
+.intro{
+  margin-left: 30px;
+}
+
+
+
+select#category, #price{
+  width:120px;
+}
