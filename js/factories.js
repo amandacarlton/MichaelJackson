@@ -1,5 +1,5 @@
 app.factory('ItemService', function () {
-var cart= {quantity: 0, items: []};
+var cart= {quantity: 0, items: [], orderTotal:0};
 var items = [
   {
       _id: "55c8ee82152165d244b98300",
@@ -127,6 +127,7 @@ var items = [
 var obj = {
 
   addtoCart: function (item, num) {
+    cart.orderTotal = Number(cart.orderTotal) + (Number(item.price) * Number(num)) || (Number(item.price) * Number(num));
     cart.quantity=Number(cart.quantity) + Number(num) || Number(num);
     item.quantity=Number(item.quantity) + Number(num) || Number(num);
     if(cart.items.indexOf(item)===-1){

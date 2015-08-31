@@ -1,5 +1,4 @@
 <h1 class="intro">Welcome to Michael Jackson</h1>
-<h2> Amanda Smells </h2>
 <div class="inputs">
 <div class="search">
 <input ng-model="search" type="text" placeholder="Search">
@@ -14,7 +13,7 @@
   <option value="-price">Descending</option>
   <option value="price">Ascending</option>
 </select>
-<input type="submit" class="btn btn-primary" value="Checkout | Bag:{{cart.quantity > 0 ? cart.quantity : ' Empty'}}">
+<input type="submit" ng-click="newPage('/cart')" class="btn btn-primary" value="Checkout | Bag:{{cart.quantity > 0 ? cart.quantity : ' Empty'}}">
 </div>
 </div>
 <table class="table">

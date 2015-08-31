@@ -4,6 +4,11 @@ img{
   width:500px;
 }
 
+.size{
+  height: 300px;
+  width: 300px;
+}
+
 .buy{
   float: right;
 }
@@ -34,8 +39,40 @@ select{
   margin-left: 30px;
 }
 
+table{
+  width: 80%;
+}
+
 
 
 select#category, #price{
   width:120px;
+}
+
+.total{
+  float: right;
+  display: inline-block;
+}
+
+form{
+  display: inline-block;
+}
+
+.edit{
+  float: left;
+  margin-right: 10px;
+}
+
+.remove{
+  float:left;
+}
+
+.larger{
+  width:40%;
+}
+
+
+
+.forms{
+  width:20%;
 }
