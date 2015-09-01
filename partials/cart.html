@@ -46,7 +46,8 @@
       </td>
       <td>
       <div>
-        {{item.quantity}}
+        <p ng-show="!save">{{item.quantity}}</p>
+        <input class="number" ng-show="save" type="number" ng-model="quantity" ng-init="quantity='item.quantity'">
         </div>
       </td>
         <td>
@@ -58,13 +59,16 @@
         <td class="forms">
           <div.larger>
           <div class="edit">
+          <form ng-submit="editQuantity()">
+          <input ng-click="toggleButton()" ng-show="save" type="submit" class="btn btn-warning" value="Save"/>
+          </form>
           <form>
-          <input type="submit" class="btn btn-warning" value="Edit"/>
+          <input ng-click="toggleButton()" ng-show="!save" type="submit" class="btn btn-warning" value="Edit"/>
         </form>
       </div>
         <div class="remove">
-          <form>
-          <input type="submit" class="btn btn-danger" value="Remove"/>
+          <form ng-submit="removefromCart()">
+          <input type="submit" ng-model="item" class="btn btn-danger" value="Remove"/>
         </form>
       </div>
     </div>

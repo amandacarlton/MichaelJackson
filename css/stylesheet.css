@@ -58,6 +58,8 @@ form{
   display: inline-block;
 }
 
+
+
 .edit{
   float: left;
   margin-right: 10px;
@@ -71,7 +73,10 @@ form{
   width:40%;
 }
 
-
+.number{
+  height:500px;
+  width:100px;
+}
 
 .forms{
   width:20%;

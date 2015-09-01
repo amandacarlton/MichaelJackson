@@ -21,6 +21,21 @@ app.controller("CartController",
 ['$scope',
 'ItemService',
 function ($scope, ItemService, $location) {
+$scope.save = false;
 $scope.cart = ItemService.cart();
 console.log($scope.cart);
+
+$scope.removefromCart = function () {
+  ItemService.removefromCart(this.item);
+  console.log($scope.cart);
+};
+
+$scope.toggleButton = function (item) {
+  this.save = !this.save;
+};
+
+$scope.editQuantity = function () {
+  ItemService.editQuantity(this.item, this.quantity);
+};
+
 }]);

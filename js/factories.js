@@ -1,4 +1,5 @@
 app.factory('ItemService', function () {
+var save = false;
 var cart= {quantity: 0, items: [], orderTotal:0};
 var items = [
   {
@@ -133,6 +134,21 @@ var obj = {
     if(cart.items.indexOf(item)===-1){
     cart.items.push(item);
   }
+  },
+
+  removefromCart: function (item) {
+    cart.orderTotal = Number(cart.orderTotal) - (Number(item.price)*Number(item.quantity));
+    cart.quantity = Number(cart.quantity) - (Number(item.quantity));
+    item.quantity = 0;
+    var index = cart.items.indexOf(item);
+    cart.items.splice(index,1);
+  },
+
+  editQuantity: function (item, num) {
+     cart.orderTotal =  Number(cart.orderTotal) - (Number(item.price)*Number(item.quantity)) + (Number(num)*Number(item.price));
+     cart.quantity = Number(cart.quantity) - Number(item.quantity) + Number(num);
+     item.quantity = Number(num);
+     console.log(cart);
   },
 
   // cartCount:function(cart) {
