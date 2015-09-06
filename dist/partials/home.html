@@ -1,0 +1,62 @@
+<h1 class="intro"></h1>
+<div class="inputs">
+<div class="search">
+<input ng-model="search" type="text" placeholder="Search">
+<label for="category">Category</label>
+<select id="category" ng-model="category">
+  <option ng-repeat="cat in cats" value={{cat}}>{{cat}}</option>
+</select>
+</div>
+<div class="checkout">
+<label for="price">Price
+<select id="price" ng-model="amount">
+  <option value="-price">Descending</option>
+  <option value="price">Ascending</option>
+</select>
+<input type="submit" ng-click="newPage('/cart')" class="btn btn-primary" value="Checkout | Bag:{{cart.quantity > 0 ? cart.quantity : ' Empty'}}">
+</div>
+</div>
+<table class="table">
+  <tr>
+  <th>Stuff</th>
+  <th>Info</th>
+</tr>
+  <tr ng-repeat="item in items|filter:category|filter:search|orderBy:amount">
+    <td>
+      <img class="img-responsive" class="center-block" class="img-thumbnail" src={{item.imageUrl}} alt="description">
+    </td>
+    <td>
+    <div>
+      <div class="info">
+      <h1>{{item.name}}</h1>
+      <p>Price: {{item.price| currency}}</p>
+      <p>Weird Scale: {{item.weirdScale}}</p>
+      <p>Description: {{item.description}}</p>
+      <p>Rating: {{item.rating}}</p>
+      <p> In Stock?: {{item.inStock| trueorFalse}}</p>
+      <p>Categories:
+        <ul ng-repeat="category in item.categories">
+          <li>{{category}}</li>
+        </ul>
+      </p>
+      <!-- <section>
+      <div class="box gauge--3">
+      <div class="mask">
+        <div class="semi-circle"></div>
+        <div class="semi-circle--mask"></div>
+      </div>
+    </div>
+  </section> -->
+      </div>
+      <div class="buy">
+        <label for="quantity">Quantity</label>
+        <select id="quantity" ng-model="quantity" ng-init="quantity='1'">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        </select>
+        <form ng-submit="addtoCart()">
+        <input type="submit" ng-model="item" class= "btn btn-danger" value="Add to Cart">
+      </div>
+    </div>

@@ -6,7 +6,7 @@ var items = [
       _id: "55c8ee82152165d244b98300",
       name: "The Glove",
       description: "The 'King of Pop,' Michael Jackson, is widely known for wearing a single white glove that was almost as iconic as his moonwalk. Buy this baby and you will be able to moonwalk too.",
-      weirdScale: 75,
+      weirdScale: 35,
       price: 2005900,
       inStock: true,
       rating: 4,
@@ -14,12 +14,11 @@ var items = [
       __v: 0,
       categories: [ "sparkly", "iconic", "apparel"]
   },
-
   {
       _id: "55c8ee82152165d244b98301",
       name: "Bubbles",
       description: "Bubbles slept in a crib in Jackson's bedroom, used the singer's toilet and ate candy in the Neverland movie theater.  You can own him today",
-      weirdScale: 200,
+      weirdScale: 100,
       price: 1004800,
       inStock: true,
       rating: 3,
@@ -31,7 +30,7 @@ var items = [
       _id: "55c8ee82152165d244b98302",
       name: "Neverland Ranch",
       description: "The 12,000 square-foot home where Michael Jackson and his numerous exotic animals once lived is now on the market. You'd be getting a steal on this 2,700 acre property",
-      weirdScale: 350,
+      weirdScale: 90,
       price: 89910000,
       inStock: true,
       rating: 5,
@@ -43,7 +42,7 @@ var items = [
       _id: "55c8ee82152165d244b98303",
       name: "The Jackson 4",
       description: "Michael Jackson may not be included but the other 4 Jackson's matter too.  This would be a perfect addition to your son's bar mitzvah",
-      weirdScale: 386,
+      weirdScale: 86,
       price: 54960,
       inStock: true,
       rating: 1,
@@ -67,7 +66,7 @@ var items = [
       _id: "55c8ee82152165d244b98305",
       name: "A date with Lisa Maria Presley",
       description: "Now that Michael and Lisa are divorced she is single and ready to mingle.  Maybe she will even take you to her father's Jungle Room",
-      weirdScale: 400,
+      weirdScale: 100,
       price: 44860000,
       inStock: true,
       rating: 3,
@@ -79,7 +78,7 @@ var items = [
       _id: "55c8ee82152165d244b98306",
       name: "Beatles Music Catalog",
       description: "Since 1985 Michael has owned rights to the Beatles Catalog.  This profitable investment could be yours today!",
-      weirdScale: 2,
+      weirdScale: 15,
       price: 69730000000,
       inStock: false,
       rating: 5,
@@ -91,7 +90,7 @@ var items = [
       _id: "55c8ee82152165d244b98307",
       name: "Michael Jackson Pepsi Can",
       description: "In 1984 Jackson was a spokesman for Pepsi, when a commercial shoot went awry his hair caught on fire but you will definitely want this can!!",
-      weirdScale: 122,
+      weirdScale: 12,
       price: 60,
       inStock: true,
       rating: 2,
@@ -103,7 +102,7 @@ var items = [
       _id: "55c8ee82152165d244b98308",
       name: "Edward Scissorhands' Scissorhands",
       description: "This is a once in a lifetime opportunity!  Purchase Michael Jackson's own memoriabila from the famous movie Edward Scissorhands...just dont get them close to your waterbed.",
-      weirdScale: 196,
+      weirdScale: 96,
       price: 1374000,
       inStock: true,
       rating: 3,
@@ -115,7 +114,7 @@ var items = [
       _id: "55c8ee82152165d244b98309",
       name: "Jackson Medical Mask",
       description: "Purchase this one of a kind, exact replica of a medical mask Jackson use to frequently sport.  Plus who knows when SARS will make a comeback.",
-      weirdScale: 480,
+      weirdScale: 80,
       price: 48,
       inStock: true,
       rating: 1,
@@ -125,7 +124,7 @@ var items = [
   }
 ];
 
-var obj = {
+var services = {
 
   addtoCart: function (item, num) {
     cart.orderTotal = Number(cart.orderTotal) + (Number(item.price) * Number(num)) || (Number(item.price) * Number(num));
@@ -183,5 +182,5 @@ var obj = {
 },
 
 
-}; return obj;
+}; return services;
 });

@@ -1,28 +1,4 @@
 
-
-
-<!-- <table class="table">
-  <tr>
-  <th>Item</th>
-  <th>Quantity</th>
-  <th>Sub-total</th>
-</tr>
-<tr ng-repeat="item in cart.items">
-  <td>
-    <div class="info">
-    <h1>{{item.name}}</h1>
-    <img class="img-responsive center-block img-thumbnail size" src={{item.imageUrl}} alt="description">
-    <p> Weird Scale: {{item.weirdScale}}</p>
-    <p> Description: {{item.description}}</p>
-    <p> Rating: {{item.rating}}</p>
-  </div>
-  </td>
-  <td>
-    {{item.quantity}}
-  </td>
-  <td>
-    {{item.quantity*item.price|currency}}
-  </td> -->
 <div>
 <div>
 <h3 class="total"> Order Total: {{cart.orderTotal|currency}} </h3>
@@ -42,6 +18,9 @@
         <p>Weird Scale: {{item.weirdScale}}</p>
         <p>Description: {{item.description}}</p>
         <p>Rating: {{item.rating}}</p>
+        <!-- <div class="caffeine-section">
+        <weird-scale weirdemg="item.weirdScale"></weird-scale>
+      </div> -->
       </div>
       </td>
       <td>
