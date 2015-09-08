@@ -1,4 +1,5 @@
 app.factory('ItemService', function () {
+var newvar;
 var save = false;
 var cart= {quantity: 0, items: [], orderTotal:0};
 var items = [
